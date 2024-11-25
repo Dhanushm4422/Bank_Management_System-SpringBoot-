@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Accounts</title>
+</head>
+<body>
+<h1>Account List</h1>
+<ul>
+    <li th:each="account : ${accounts}">
+        <span th:text="${account.name}">Account Name</span> -
+        <span th:text="${account.balance}">Account Balance</span>
+    </li>
+</ul>
+<a href="/accounts/create">Create New Account</a>
+</body>
+</html>
